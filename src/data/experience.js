@@ -1,0 +1,58 @@
+export const EXPERIENCE = [
+  {
+    role: "Buildspace: Kubernetes & Docker Demo",
+    org: "Personal Project",
+    location: "",
+    period: "Jun 2026",
+    tools: ["Docker", "Kubernetes (Minikube)", "Node.js 22", "pnpm", "Nginx", "Git", "GitHub"],
+    link: "http://github.com/Susie288/buildspace",
+    points: [
+      "Containerized a web application using a multi-stage Docker build to optimize image size and production deployment.",
+      "Built the application with Node.js and pnpm, and served the production build using Nginx within a Docker container.",
+      "Deployed the application to a local Kubernetes cluster using Minikube with Kubernetes Deployment and Service manifests.",
+      "Configured Kubernetes label selectors, pod networking, and a NodePort Service to expose the application for browser access.",
+      "Managed the application lifecycle using kubectl, including deploying resources, monitoring pods, and verifying service availability.",
+    ],
+  },
+  {
+    role: "Capstone Project Manager, Web App Deployment",
+    org: "AWS Azubi Africa",
+    location: "Accra, Ghana",
+    period: "May 2026",
+    tools: ["Trello", "AWS Management Console", "GitHub", "Claude AI"],
+    link: "https://github.com/Immenz0260/aws-capstone-project-group-10",
+    points: [
+      "Led end-to-end planning and execution of a cloud deployment project across 4+ team members, hitting 100% milestone completion within sprint timelines.",
+      "Produced and maintained 3+ structured technical documents — project documentation, architecture diagrams, and presentation slides — for team alignment and future maintenance.",
+      "Managed project tasks in Trello, cutting missed deadlines by an estimated 35% through better tracking workflows.",
+      "Documented AWS infrastructure setup (EC2, S3, IAM roles, deployment pipelines), reducing onboarding setup confusion by about 40%.",
+    ],
+  },
+  {
+    role: "Frontend Developer",
+    org: "PuzzleIt (SaaS Project)",
+    location: "Remote",
+    period: "Jan 2026 — Mar 2026",
+    tools: ["Next.js", "TypeScript", "GitHub", "Vercel"],
+    link: "https://github.com/Susie288/PuzzleIt",
+    points: [
+      "Engineered PuzzleIt, a SaaS platform that converts images into interactive puzzles, supporting early-stage testing with 5+ users.",
+      "Collaborated via GitHub using feature branches and pull requests, shipping 10+ commits across core features and iterations.",
+      "Optimized application performance, reducing initial load time through code splitting and asset optimization.",
+      "Deployed and maintained the live app on Vercel with near-zero downtime during testing cycles.",
+    ],
+  },
+  {
+    role: "Junior Software Engineer",
+    org: "QACE Company Limited",
+    location: "Lashibi, Accra",
+    period: "Jul 2025 — Feb 2026",
+    tools: ["WordPress", "Elementor", "Figma"],
+    points: [
+      "Revamped two company websites with WordPress and Elementor, increasing site speed by 2 seconds and boosting user engagement by 15%.",
+      "Collaborated with senior developers on feature development and deployment cycles, improving delivery efficiency by 20–30%.",
+      "Managed digital content across 5 social media platforms, increasing audience engagement by 40%.",
+      "Customized WordPress themes and plugins, reducing page load times by 15%.",
+    ],
+  },
+];

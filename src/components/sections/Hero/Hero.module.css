@@ -1,0 +1,216 @@
+.hero {
+  padding-block: clamp(3.5rem, 10vh, 7rem) clamp(3rem, 8vh, 5rem);
+}
+
+.grid {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+  }
+}
+
+.copy {
+  min-width: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--deploy);
+  margin-bottom: 1.4rem;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.1rem, 5.4vw, var(--fs-3xl));
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+
+.headlineAccent {
+  color: var(--text-muted);
+}
+
+.summary {
+  margin-top: 1.6rem;
+  max-width: 52ch;
+  color: var(--text-muted);
+  font-size: var(--fs-md);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.2rem;
+}
+
+.primaryAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--signal);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  padding: 0.8rem 1.3rem;
+  border-radius: var(--radius-sm);
+  transition: transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.primaryAction:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--signal) 60%, transparent);
+}
+
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-sm);
+  padding: 0.8rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+
+.secondaryAction:hover {
+  border-color: var(--wire);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.6rem 1.2rem;
+  margin-top: clamp(2.4rem, 6vw, 3.4rem);
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--line);
+  max-width: 460px;
+}
+
+@media (min-width: 560px) {
+  .stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.statValue {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  color: var(--text);
+}
+
+.statLabel {
+  margin-top: 0.3rem;
+  font-size: var(--fs-2xs);
+  color: var(--text-faint);
+  line-height: 1.35;
+}
+
+/* Terminal */
+
+.terminalWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.terminal {
+  width: 100%;
+  max-width: 420px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
+}
+
+.terminalBar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-raised);
+}
+
+.terminalDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--line);
+}
+
+.terminalDot[data-tone="signal"] {
+  background: var(--signal-dim);
+}
+.terminalDot[data-tone="wire"] {
+  background: color-mix(in srgb, var(--wire) 50%, var(--line));
+}
+.terminalDot[data-tone="deploy"] {
+  background: var(--deploy-dim);
+}
+
+.terminalTitle {
+  margin-left: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  color: var(--text-faint);
+}
+
+.terminalBody {
+  padding: 1.25rem 1.1rem;
+  min-height: 190px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+}
+
+.terminalLine {
+  display: flex;
+  gap: 0.5rem;
+  min-height: 1.6em;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+.terminalPrompt {
+  color: var(--deploy);
+  flex: none;
+}
+
+.terminalLine.out {
+  color: var(--text-faint);
+  padding-left: 1.15rem;
+}
+
+.terminalLine.ok {
+  color: var(--deploy);
+  padding-left: 1.15rem;
+  font-weight: 500;
+}
+
+.cursor {
+  display: inline-block;
+  width: 6px;
+  height: 1.05em;
+  background: var(--signal);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

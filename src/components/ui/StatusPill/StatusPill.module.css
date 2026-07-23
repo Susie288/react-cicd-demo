@@ -1,0 +1,35 @@
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-mono);
+  font-size: var(--fs-2xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3em 0.65em;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.deploy {
+  color: var(--deploy);
+  border-color: var(--deploy-dim);
+}
+
+.wire {
+  color: var(--wire);
+  border-color: color-mix(in srgb, var(--wire) 35%, var(--line));
+}
+
+.signal {
+  color: var(--signal);
+  border-color: var(--signal-dim);
+}
