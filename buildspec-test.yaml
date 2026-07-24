@@ -1,0 +1,34 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 22
+    commands:
+      - echo Installing dependencies for tests...
+      - npm install
+
+  pre_build:
+    commands:
+      - echo Preparing test environment...
+      - npm --version
+      - node --version
+
+  build:
+    commands:
+      - echo Running application tests...
+      - npm test -- --watchAll=false
+
+  post_build:
+    commands:
+      - echo Tests completed successfully
+
+reports:
+  test-results:
+    files:
+      - '**/*'
+    base-directory: test-results
+
+cache:
+  paths:
+    - 'node_modules/**/*'
