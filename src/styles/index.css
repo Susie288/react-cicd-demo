@@ -7,7 +7,7 @@
 
 :root {
   /* Color */
-  --ink: #0f1420;          /* page background — deep blue-black, not pure black */
+  --ink: #1b5bee;          /* page background — deep blue-black, not pure black */
   --panel: #161d2e;        /* card / raised surface */
   --panel-raised: #1c2437; /* hovered / active surface */
   --line: #2a3247;         /* hairline borders on dark */
